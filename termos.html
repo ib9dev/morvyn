@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d0919">
+<meta name="description" content="Termos de Uso e Política de Privacidade do Morvyn, bot de WhatsApp oferecido como serviço.">
+<title>Termos de Uso e Privacidade | Morvyn</title>
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;800&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+/* Paleta tirada da arte: quarto de madrugada (violeta), luar (lilás claro) e a luz do abajur (âmbar, só em destaques) */
+:root{--noite:#0d0919;--painel:#150f27;--painel2:#1d1535;--linha:#2d2350;--luar:#eae4ff;--mudo:#a096be;--violeta:#8f5cf2;--lilas:#c4a8ff;--lampada:#ffb36b;
+--disp:"Gabarito","Trebuchet MS",system-ui,sans-serif;--corpo:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;color-scheme:dark}
+body{background:var(--noite);color:var(--luar);font:17px/1.6 var(--corpo);padding-bottom:env(safe-area-inset-bottom);
+background-image:radial-gradient(900px 500px at 85% -80px,#3b1d7a55,transparent 70%),radial-gradient(700px 400px at -10% 40%,#24104f44,transparent 70%);background-repeat:no-repeat}
+::selection{background:var(--violeta);color:#fff}
+a{color:inherit;text-decoration:none}
+.w{max-width:1120px;margin:0 auto;padding:0 22px}
+.mu{color:var(--mudo)}
+h1,h2,h3,.preco,.stat b{font-family:var(--disp)}
+h1{font-size:clamp(40px,7vw,72px);line-height:1;letter-spacing:-.03em;font-weight:800}
+h2{font-size:clamp(30px,4.6vw,46px);letter-spacing:-.02em;line-height:1.08;font-weight:800}
+h3{font-size:20px;font-weight:600;line-height:1.25}
+a em{font-style:normal;color:var(--lilas);text-decoration:underline;text-underline-offset:3px}
+section{padding:96px 0 0}
+.sec-h{display:flex;flex-direction:column;gap:12px;margin-bottom:36px;max-width:620px}
+/* controles personalizados: nada com a aparência padrão do navegador */
+button,input,summary{appearance:none;-webkit-appearance:none}
+.btn,.qk button,.envio input{font:inherit}
+header{position:sticky;top:0;z-index:5;background:#0d0919cc;backdrop-filter:blur(14px);border-bottom:1px solid var(--linha);padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:14px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font:800 23px var(--disp);letter-spacing:-.02em}
+.sp{flex:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;color:var(--luar);background:transparent;border:1.5px solid var(--linha);border-radius:999px;padding:12px 22px;min-height:48px;cursor:pointer;transition:border-color .15s,transform .1s,box-shadow .2s}
+.btn:hover{border-color:var(--lilas)}.btn:active{transform:scale(.97)}
+.pri{background:var(--violeta);border-color:var(--violeta);color:#fff;box-shadow:0 6px 28px #8f5cf255}
+.pri:hover{background:#9d70f5;border-color:#9d70f5;box-shadow:0 8px 34px #8f5cf288}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--lampada);outline-offset:3px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.chip{display:inline-block;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700;background:var(--painel2);color:var(--lilas);align-self:flex-start;border:1px solid var(--linha)}
+code{background:var(--painel2);border:1px solid var(--linha);border-radius:8px;padding:2px 9px;font:14px ui-monospace,Menlo,monospace;color:var(--lilas)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+
+
+h1{font-size:clamp(34px,6vw,56px)}
+.layout{display:grid;grid-template-columns:230px minmax(0,700px);column-gap:64px;justify-content:center;max-width:1120px;margin:0 auto;padding:0 22px}
+.layout>*{grid-column:2}
+.topo{padding:60px 0 8px}.topo p{margin-top:12px}
+.resumo{position:relative;margin-top:28px;padding:26px 28px;border:1.5px solid var(--violeta);border-radius:24px;background:linear-gradient(160deg,#2a1a52,var(--painel) 70%);box-shadow:0 24px 60px #8f5cf222}
+.resumo svg{position:absolute;right:22px;top:-26px;width:88px;border-radius:50%;border:1.5px solid var(--violeta);transform:rotate(6deg)}
+.resumo h2{margin:0 0 14px;font-size:24px;padding-right:80px}
+.resumo ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px}
+.resumo li{display:flex;gap:12px}
+.resumo li::before{content:"";width:9px;height:9px;border-radius:50%;box-shadow:-3px 1px 0 0 var(--lilas);margin:9px 0 0 4px;flex:none}
+.resumo b{color:var(--lilas)}
+details.toc{grid-column:1;grid-row:1/span 4;align-self:start;position:sticky;top:96px;margin-top:64px;border:0;border-left:1.5px solid var(--linha);padding:0 0 0 20px}
+details.toc summary{padding:0 0 12px;font:600 18px var(--disp);display:flex;justify-content:space-between;list-style:none;cursor:pointer}
+details.toc summary::after{content:"+";font:400 26px/1 var(--corpo);color:var(--lilas);transition:transform .25s}
+details.toc[open] summary::after{transform:rotate(45deg)}
+details.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none;padding:0;display:grid;gap:2px}
+.toc a{display:block;padding:6px 0;color:var(--mudo);font-size:15px;line-height:1.35;transition:color .15s}
+.toc a:hover{color:var(--lilas)}
+article section{padding-top:56px}
+h2{font-size:clamp(24px,3.6vw,30px);line-height:1.15;margin-bottom:16px}
+h2 a{text-decoration:none}
+.c{display:flex;gap:16px;margin-top:14px;font-size:17px;line-height:1.7}
+.c .n{flex:none;min-width:38px;color:var(--lilas);font:600 17px var(--disp);font-variant-numeric:tabular-nums}
+.c span{flex:1}
+article ul.l{margin:14px 0 0 38px;display:flex;flex-direction:column;gap:8px;padding-left:0}
+.dest{margin-top:18px;background:var(--painel);border:1px solid var(--linha);border-left:3px solid var(--violeta);border-radius:14px;padding:16px 20px}
+.tw{overflow-x:auto;margin-top:16px;border:1.5px solid var(--linha);border-radius:18px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:16px}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--linha)}
+th{background:var(--painel2);color:var(--mudo);font-weight:500;font-size:14px}
+tr:last-child td{border-bottom:0}
+td:nth-child(2){font:600 17px var(--disp);white-space:nowrap}
+mark.preencher{background:#fde68a;color:#3b2f00;border-radius:4px;padding:0 4px}
+.fim{margin-top:72px;border-top:1px solid var(--linha);padding:30px 0 10px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+footer{margin-top:96px;border-top:1px solid var(--linha);padding:30px 0 44px;color:var(--mudo);font-size:14px}
+footer .w{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+footer svg{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--linha);flex:none}
+footer p{flex:1 1 320px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--painel2);border:1px solid var(--violeta);border-radius:14px;padding:11px 18px;font-size:14px;z-index:9;box-shadow:0 8px 28px #000a}
+
+
+@media(min-width:1000px){details.toc summary{pointer-events:none;cursor:default}details.toc summary::after{display:none}}
+@media(max-width:999px){.layout{grid-template-columns:minmax(0,1fr)}.layout>*,details.toc{grid-column:1}details.toc{grid-row:auto;position:static;margin-top:18px;border:1.5px solid var(--linha);border-radius:18px;padding:0 20px}details.toc summary{padding:16px 0 0;margin-bottom:0}details.toc:not([open]) summary{padding-bottom:16px}.toc ol{padding-bottom:14px;padding-top:8px}.topo{padding-top:34px}.resumo svg{width:72px;right:18px;top:-22px}.c{flex-direction:column;gap:2px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{
+  :root{--noite:#fff;--painel:#fff;--painel2:#f3f3f3;--linha:#ccc;--luar:#111;--mudo:#555;--lilas:#5a1f8f}
+  body{background:#fff;font-size:12pt}header,.fim .btn,details.toc,.resumo svg,footer{display:none}
+  .layout{display:block;max-width:none}.resumo{background:#fff;border-color:#999;box-shadow:none}
+}
+
+/* ===== YORU EM SVG ===== */
+svg.yoru{display:block;aspect-ratio:1;height:auto;max-width:100%}
+@media(prefers-reduced-motion:no-preference){.y-zzz{animation:zzz 3.2s ease-in-out infinite}.y-brilho{animation:brilho 3.4s ease-in-out infinite}}
+@keyframes zzz{50%{opacity:.4;transform:translateY(-3px)}}
+.y-pupila{transform:translate(calc(var(--yx,0)*1px),calc(var(--yy,0)*1px));transition:transform .14s ease-out}
+
+/* ===== PATINHA: VOLTAR AO TOPO ===== */
+.subir{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom));z-index:8;width:54px;height:54px;border-radius:50%;border:1.5px solid var(--violeta);background:var(--painel2);color:var(--lilas);display:grid;place-items:center;padding:0;cursor:pointer;box-shadow:0 8px 28px #8f5cf244;opacity:0;visibility:hidden;transform:translateY(14px) scale(.8);transition:opacity .25s,transform .3s cubic-bezier(.3,1.5,.5,1),visibility 0s .3s,background .15s,color .15s}
+.subir.on{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.subir:hover{background:var(--violeta);color:#fff}
+.subir:active{transform:scale(.92)}
+.subir svg{width:26px;height:26px}
+@media print{.subir{display:none}}
+@keyframes brilho{50%{opacity:.55}}
+
+/* ===== MENU LATERAL ===== */
+.burger{display:inline-flex;flex-direction:column;justify-content:center;align-items:flex-end;gap:5px;width:48px;height:48px;padding:0 13px;border:1.5px solid var(--linha);border-radius:999px;background:transparent;cursor:pointer;flex:none;transition:border-color .15s,background .15s}
+.burger:hover{border-color:var(--lilas);background:var(--painel2)}
+.burger span{display:block;height:2px;width:20px;border-radius:2px;background:var(--luar);transition:transform .3s,opacity .2s}
+.burger span:nth-child(2){width:13px}
+.scrim{position:fixed;inset:0;z-index:19;background:#05020dcc;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.menu{position:fixed;top:0;right:0;bottom:0;z-index:20;width:min(340px,88vw);display:flex;flex-direction:column;padding:calc(14px + env(safe-area-inset-top)) 22px calc(22px + env(safe-area-inset-bottom));background:linear-gradient(180deg,#24154a,var(--painel) 55%);border-left:1.5px solid var(--linha);box-shadow:-30px 0 80px #0009;transform:translateX(104%);visibility:hidden;overflow-y:auto;overscroll-behavior:contain;transition:transform .35s cubic-bezier(.2,.8,.2,1),visibility 0s .35s}
+.menu-top{display:flex;align-items:center;justify-content:space-between;min-height:48px;margin-bottom:10px}
+.menu-top b{font:800 23px var(--disp);letter-spacing:-.02em}
+.fechar{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--linha);background:transparent;color:var(--luar);font:400 28px/1 var(--corpo);cursor:pointer;transition:border-color .15s}
+.fechar:hover{border-color:var(--lilas)}
+.menu nav{display:flex;flex-direction:column}
+.menu nav a{display:flex;align-items:center;gap:14px;padding:15px 4px;border-bottom:1px solid var(--linha);font:600 22px/1.2 var(--disp);color:var(--luar);opacity:0;transform:translateX(16px);transition:opacity .3s,transform .35s,color .15s,padding .2s}
+.menu nav a::before{content:"";width:9px;height:9px;border-radius:50%;box-shadow:-3px 1px 0 0 var(--lilas);margin-left:4px;flex:none;opacity:.45;transition:opacity .2s}
+.menu nav a:hover,.menu nav a[aria-current]{color:var(--lilas);padding-left:10px}
+.menu nav a:hover::before,.menu nav a[aria-current]::before{opacity:1}
+.menu .btn{margin-top:22px}
+.menu-yoru{margin-top:auto;padding-top:28px;display:flex;align-items:center;gap:14px;color:var(--mudo);font-size:14px;line-height:1.4}
+.menu-yoru svg{width:84px;height:84px;border-radius:22px;border:1.5px solid var(--linha);flex:none;transform:rotate(-3deg)}
+body.menu-open .scrim{opacity:1;visibility:visible;transition:opacity .3s}
+body.menu-open .menu{transform:none;visibility:visible;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+body.menu-open .menu nav a{opacity:1;transform:none;transition-delay:calc(var(--i)*45ms + 90ms),calc(var(--i)*45ms + 90ms),0s,0s}
+body.menu-open .burger{border-color:var(--violeta)}
+body.menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media print{.menu,.scrim,.burger{display:none}}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="yg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34206a"/><stop offset="1" stop-color="#150d2b"/></linearGradient>
+<radialGradient id="yglow"><stop offset="0" stop-color="#8f5cf2" stop-opacity=".55"/><stop offset="1" stop-color="#8f5cf2" stop-opacity="0"/></radialGradient>
+<g id="y-cabeca">
+<g fill="#160d29" stroke="#160d29" stroke-width="6" stroke-linejoin="round"><path d="M63 70L61 32L90 54z"/><path d="M137 70L139 32L110 54z"/></g>
+<path d="M66 60L65 43L81 53z" fill="#6b3fc0"/><path d="M134 60L135 43L119 53z" fill="#6b3fc0"/>
+<ellipse cx="100" cy="86" rx="42" ry="35" fill="#160d29"/>
+<path d="M60 80Q58 98 70 108" fill="none" stroke="#3a2470" stroke-width="2" stroke-linecap="round"/>
+<circle cx="100" cy="66" r="6" fill="#c4a8ff"/><circle cx="103" cy="64.5" r="5.2" fill="#160d29"/>
+<path d="M96.5 100h7l-3.5 4z" fill="#8f5cf2" stroke="#8f5cf2" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M100 104Q96 109 91 107M100 104Q104 109 109 107" fill="none" stroke="#6b3fc0" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M70 98L48 93M70 103L47 105M130 98L152 93M130 103L153 105" fill="none" stroke="#6a4cb0" stroke-width="1.4" stroke-linecap="round" opacity=".85"/>
+</g>
+<g id="y-corpo">
+<path d="M150 192C176 188 184 160 170 140" fill="none" stroke="#130b24" stroke-width="13" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" values="-6 150 192;7 150 192;-6 150 192" keyTimes="0;.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="3s" repeatCount="indefinite"/></path>
+<path d="M50 206C44 150 64 114 100 114C136 114 156 150 150 206z" fill="#130b24" stroke="#2f1d57" stroke-width="2"/>
+<g fill="#1a1032" stroke="#2f1d57" stroke-width="2"><ellipse cx="84" cy="190" rx="13" ry="9"/><ellipse cx="116" cy="190" rx="13" ry="9"/></g>
+</g>
+</defs>
+
+<symbol id="yoru-duvida" viewBox="0 0 200 200">
+<rect width="200" height="200" fill="url(#yg)"/>
+<circle cx="152" cy="46" r="22" fill="#c4a8ff" opacity=".13"/>
+<use href="#y-corpo"/>
+<g transform="rotate(-7 100 118)"><use href="#y-cabeca"/><g transform="translate(84 90)"><ellipse rx="10" ry="11" fill="#b48cff"><animate attributeName="ry" values="11;11;1;11;11" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><g class="y-pupila"><ellipse cx="-2" cy="-2" rx="4.6" ry="8" fill="#150a2e"><animate attributeName="ry" values="8;8;.5;8;8" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><circle cx="0.6000000000000001" cy="-6" r="2.6" fill="#fff"><animate attributeName="opacity" values="1;1;0;1;1" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></circle></g></g><g transform="translate(116 90)"><ellipse rx="10" ry="11" fill="#b48cff"><animate attributeName="ry" values="11;11;1;11;11" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><g class="y-pupila"><ellipse cx="-2" cy="-2" rx="4.6" ry="8" fill="#150a2e"><animate attributeName="ry" values="8;8;.5;8;8" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><circle cx="0.6000000000000001" cy="-6" r="2.6" fill="#fff"><animate attributeName="opacity" values="1;1;0;1;1" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></circle></g></g></g>
+<text x="30" y="62" font-family="Gabarito,Trebuchet MS,sans-serif" font-weight="800" font-size="46" fill="#c4a8ff" transform="rotate(-12 38 50)">?</text>
+<path d="M150 66l10-5M154 80l12-1M148 52l5-10" fill="none" stroke="#c4a8ff" stroke-width="3" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="yoru-monitor" viewBox="0 0 200 200">
+<rect width="200" height="200" fill="url(#yg)"/>
+<ellipse cx="156" cy="82" rx="62" ry="52" fill="url(#yglow)" class="y-brilho"/>
+<g transform="translate(122 48)">
+<path d="M28 64h14l3 12H25z" fill="#2a1f4d"/><rect x="17" y="75" width="36" height="5" rx="2.5" fill="#2a1f4d"/>
+<rect width="70" height="64" rx="7" fill="#0d0919" stroke="#8f5cf2" stroke-width="2.5"/>
+<path d="M19 12H51a6 6 0 0 1 6 6V36a6 6 0 0 1-6 6H35L27 50V42H19a6 6 0 0 1-6-6V18a6 6 0 0 1 6-6z" fill="none" stroke="#c4a8ff" stroke-width="3" stroke-linejoin="round"/>
+<text x="35" y="34" text-anchor="middle" font-family="Gabarito,Trebuchet MS,sans-serif" font-weight="800" font-size="20" fill="#c4a8ff">M</text>
+</g>
+<rect x="96" y="128" width="104" height="6" rx="3" fill="#2a1f4d"/>
+<g transform="translate(-6 34) scale(.8)"><use href="#y-corpo"/><use href="#y-cabeca"/><g transform="translate(84 90)"><ellipse rx="10" ry="11" fill="#b48cff"><animate attributeName="ry" values="11;11;1;11;11" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><g class="y-pupila"><ellipse cx="3.5" cy="-3.5" rx="4.6" ry="8" fill="#150a2e"><animate attributeName="ry" values="8;8;.5;8;8" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><circle cx="6.1" cy="-7.5" r="2.6" fill="#fff"><animate attributeName="opacity" values="1;1;0;1;1" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></circle></g></g><g transform="translate(116 90)"><ellipse rx="10" ry="11" fill="#b48cff"><animate attributeName="ry" values="11;11;1;11;11" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><g class="y-pupila"><ellipse cx="3.5" cy="-3.5" rx="4.6" ry="8" fill="#150a2e"><animate attributeName="ry" values="8;8;.5;8;8" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><circle cx="6.1" cy="-7.5" r="2.6" fill="#fff"><animate attributeName="opacity" values="1;1;0;1;1" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></circle></g></g></g>
+</symbol>
+
+<symbol id="yoru-cabos" viewBox="0 0 200 200">
+<rect width="200" height="200" fill="url(#yg)"/>
+<ellipse cx="100" cy="148" rx="50" ry="44" fill="#130b24"/>
+<g transform="translate(100 74) scale(1) translate(-100 -84)"><use href="#y-cabeca"/><g transform="translate(84 90)"><ellipse rx="10" ry="11" fill="#b48cff"><animate attributeName="ry" values="11;11;1;11;11" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><g class="y-pupila"><ellipse cx="0" cy="4.5" rx="4.6" ry="8" fill="#150a2e"><animate attributeName="ry" values="8;8;.5;8;8" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><circle cx="2.6" cy="0.5" r="2.6" fill="#fff"><animate attributeName="opacity" values="1;1;0;1;1" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></circle></g></g><g transform="translate(116 90)"><ellipse rx="10" ry="11" fill="#b48cff"><animate attributeName="ry" values="11;11;1;11;11" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><g class="y-pupila"><ellipse cx="0" cy="4.5" rx="4.6" ry="8" fill="#150a2e"><animate attributeName="ry" values="8;8;.5;8;8" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></ellipse><circle cx="2.6" cy="0.5" r="2.6" fill="#fff"><animate attributeName="opacity" values="1;1;0;1;1" keyTimes="0;.93;.96;.99;1" dur="5.5s" repeatCount="indefinite"/></circle></g></g></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-10 176C30 150 70 196 100 172S160 150 210 180" stroke="#34285e" stroke-width="10"/>
+<path d="M-10 160C40 190 60 140 104 168S170 196 210 164" stroke="#e6dcff" stroke-width="5" opacity=".92"/>
+<path d="M10 206C50 160 96 200 130 166S186 190 208 198" stroke="#241a45" stroke-width="9"/>
+<path d="M10 206C50 160 96 200 130 166S186 190 208 198" stroke="#5a44a0" stroke-width="2" opacity=".9"/>
+<path d="M40 190C70 168 90 190 116 184" stroke="#8f5cf2" stroke-width="3" opacity=".8"/>
+</g>
+<g fill="#1a1032" stroke="#2f1d57" stroke-width="2"><ellipse cx="84" cy="166" rx="12" ry="8.5"/><ellipse cx="116" cy="164" rx="12" ry="8.5"/></g>
+<path d="M34 54l-9-6M42 44l-4-11M54 40l1-11M166 54l9-6M158 44l4-11M146 40l-1-11" fill="none" stroke="#c4a8ff" stroke-width="3" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="yoru-zzz" viewBox="0 0 200 200">
+<rect width="200" height="200" fill="url(#yg)"/>
+<circle cx="152" cy="40" r="20" fill="#c4a8ff" opacity=".13"/>
+<path d="M0 124C36 106 70 136 112 118S180 110 200 126V200H0z" fill="#3c2c70"/>
+<path d="M0 150C40 134 80 164 120 148S180 142 200 154V200H0z" fill="#2c1f55"/>
+<path d="M24 172C56 160 80 180 112 172M126 178C150 170 170 180 192 174" fill="none" stroke="#5a44a0" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+<ellipse cx="116" cy="150" rx="66" ry="36" fill="#130b24" stroke="#2f1d57" stroke-width="2"/>
+<path d="M92 124C118 114 154 120 170 140" fill="none" stroke="#3a2470" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+<path d="M172 150C168 182 120 190 78 180" fill="none" stroke="#130b24" stroke-width="14" stroke-linecap="round"/>
+<g transform="translate(66 138) rotate(-8) scale(.78) translate(-100 -86)"><use href="#y-cabeca"/>
+<path d="M74 92Q84 101 94 92M106 92Q116 101 126 92" fill="none" stroke="#b48cff" stroke-width="3.2" stroke-linecap="round"/></g>
+<ellipse cx="62" cy="176" rx="15" ry="8" fill="#1a1032" stroke="#2f1d57" stroke-width="2"/>
+<g class="y-zzz" font-family="Gabarito,Trebuchet MS,sans-serif" font-weight="800" fill="#c4a8ff"><text x="112" y="80" font-size="28">Z</text><text x="136" y="58" font-size="21">z</text><text x="154" y="41" font-size="15">z</text></g>
+</symbol>
+</svg>
+<header><div class="w bar">
+  <a class="brand" href="index.html"><img src="icon-192.png" width="34" height="34" alt="" style="border-radius:11px">Morvyn</a>
+  <span class="sp"></span>
+  <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+</div></header>
+<div class="scrim" id="scrim"></div>
+<aside class="menu" id="menu" aria-label="Menu principal">
+  <div class="menu-top"><b>Menu</b><button class="fechar" id="fechar" type="button" aria-label="Fechar menu">×</button></div>
+  <nav aria-label="Seções"><a href="index.html#recursos" style="--i:0">Recursos</a><a href="comandos.html" style="--i:1">Comandos</a><a href="index.html#planos" style="--i:2">Planos</a><a href="index.html#como" style="--i:3">Como contratar</a><a href="index.html#faq" style="--i:4">Dúvidas</a><a href="termos.html" style="--i:5" aria-current="page">Termos</a></nav>
+  <a class="btn" href="index.html">Voltar ao site</a>
+  <div class="menu-yoru"><svg class="yoru" viewBox="0 0 200 200"  aria-hidden="true"><use href="#yoru-monitor"/></svg><span>Se você se perder, o Yoru acha o caminho.</span></div>
+</aside>
+
+<main class="layout">
+  <div class="topo">
+    <h1>Termos de Uso e Política de Privacidade</h1>
+    <p class="mu">Bot de WhatsApp oferecido como serviço. Versão 1.0, atualizada em 30 de outubro de 2026.</p>
+  </div>
+
+  <div class="resumo">
+    <svg class="yoru" viewBox="0 0 200 200" role="img" aria-label="Yoru, o gato do Morvyn, com um ponto de interrogação"><use href="#yoru-duvida"/></svg>
+    <h2>Resumo em linguagem simples</h2>
+    <ul>
+      <li><span><b>O que é:</b> o Morvyn é um bot de WhatsApp que nós operamos para você, em um servidor, para facilitar. Assim você não precisa instalar, hospedar e manter o bot por conta própria.</span></li>
+      <li><span><b>Para que usamos a conexão:</b> somente para o bot funcionar e prestar o serviço que você contratou.</span></li>
+      <li><span><b>O que não fazemos:</b> não lemos, não gravamos, não vendemos e não compartilhamos o conteúdo das suas conversas, nem de grupos nem privadas.</span></li>
+      <li><span><b>Como o bot funciona:</b> ele analisa cada mensagem na hora, de forma automática, só para saber se é um comando, e depois descarta.</span></li>
+      <li><span><b>O que guardamos:</b> apenas dados de funcionamento (configurações, contagens e a lista de grupos), nunca o conteúdo das mensagens.</span></li>
+      <li><span><b>Recomendação:</b> use um número só para o bot, e não o seu número pessoal.</span></li>
+    </ul>
+  </div>
+
+  <details class="toc" open>
+    <summary>Índice</summary>
+    <ol>
+      <li><a href="#s1">1. Quem somos e o que é o serviço</a></li>
+      <li><a href="#s2">2. Como funciona a conexão com o WhatsApp</a></li>
+      <li><a href="#s3">3. O que o Prestador não faz com as suas conversas</a></li>
+      <li><a href="#s4">4. Dados que guardamos (Política de Privacidade)</a></li>
+      <li><a href="#s5">5. Recursos de inteligência artificial</a></li>
+      <li><a href="#s6">6. Compartilhamento de dados</a></li>
+      <li><a href="#s7">7. Papéis, segurança, retenção e seus direitos</a></li>
+      <li><a href="#s8">8. Planos, pagamento e liberação</a></li>
+      <li><a href="#s9">9. Cancelamento e reembolso</a></li>
+      <li><a href="#s10">10. Disponibilidade, limites e riscos</a></li>
+      <li><a href="#s11">11. Uso proibido e suspensão</a></li>
+      <li><a href="#s12">12. Alterações, contato e foro</a></li>
+    </ol>
+  </details>
+
+  <article>
+    <section id="s1">
+      <h2>1. Quem somos e o que é o serviço</h2>
+      <p class="c"><b class="n">1.1</b><span>Estes termos regulam o uso do Morvyn, serviço oferecido por <mark class="preencher">Ibson Hithian da Silva Sousa</mark>, <mark class="preencher">09002879180</mark> ("Prestador"). Contato: WhatsApp +55 61 99196-9783 e e-mail <mark class="preencher">ibson.hit@gmail.com</mark>.</span></p>
+      <p class="c"><b class="n">1.2</b><span>O Morvyn é um software de automação (bot) para grupos de WhatsApp. O serviço consiste em hospedar e operar o bot para o cliente em servidor do Prestador. As configurações do bot (comandos ligados e desligados, prefixo, textos de boas-vindas e despedida, antilink e antispam) são feitas pelo Prestador a pedido do cliente, pelo WhatsApp.</span></p>
+      <p class="c"><b class="n">1.3</b><span>O serviço existe como comodidade. A alternativa seria o próprio cliente instalar e manter o bot (por exemplo no Termux ou em um servidor próprio), o que exige conhecimento técnico. Quem preferir fazer isso pode comprar o código do bot (item 8).</span></p>
+      <p class="c"><b class="n">1.4</b><span>Ao contratar ou usar o serviço, o cliente declara que leu e aceita estes termos.</span></p>
+    </section>
+
+    <section id="s2">
+      <h2>2. Como funciona a conexão com o WhatsApp</h2>
+      <p class="c"><b class="n">2.1</b><span>O bot funciona como "aparelho conectado" do número informado, pareado pelo próprio cliente por meio de um código de pareamento.</span></p>
+      <p class="c"><b class="n">2.2</b><span>A sessão de conexão fica guardada no servidor para que o bot continue funcionando. Ela é protegida e usada exclusivamente para operar o serviço.</span></p>
+      <p class="c"><b class="n">2.3</b><span>O cliente pode desconectar o bot a qualquer momento em WhatsApp, Aparelhos conectados, ou pedir o encerramento do serviço.</span></p>
+      <p class="c"><b class="n">2.4</b><span><b>Número dedicado.</b> Recomendamos usar um número só para o bot. Se o cliente conectar o número pessoal, o bot passa a receber, para funcionar, todas as mensagens desse número, inclusive conversas privadas, e o cliente assume esse risco. Mesmo nesse caso, valem todos os compromissos do item 3.</span></p>
+    </section>
+
+    <section id="s3">
+      <h2>3. O que o Prestador não faz com as suas conversas</h2>
+      <p>O Prestador se compromete a:</p>
+      <ul class="l" style="margin-left:20px">
+        <li>não ler, copiar, armazenar, vender ou compartilhar o conteúdo de mensagens, fotos, vídeos, áudios ou arquivos, de grupos ou de conversas privadas;</li>
+        <li>não acessar as conversas do cliente, nem usar a conexão para espionar, monitorar ou analisar conteúdo;</li>
+        <li>não enviar mensagens em nome do cliente, além das respostas automáticas dos comandos e recursos que ele mesmo configurou;</li>
+        <li>não entrar, sair ou alterar grupos do cliente sem que ele peça;</li>
+        <li>manter desativados, no servidor, os registros (logs) de conteúdo de mensagens.</li>
+      </ul>
+      <div class="dest"><b>Como o bot lê as mensagens.</b> Para funcionar, o servidor do bot recebe as mensagens do número conectado e as analisa automaticamente, apenas em memória e no momento em que chegam, para identificar se há um comando. Isso é inerente ao funcionamento de qualquer bot, é feito por software, sem leitura por pessoas, e o conteúdo não é gravado.</div>
+    </section>
+
+    <section id="s4">
+      <h2>4. Dados que guardamos (Política de Privacidade)</h2>
+      <p class="c"><b class="n">4.1</b><span><b>Dados de cadastro do cliente:</b> nome, número do bot, número(s) do dono, plano contratado, datas de início e vencimento, limite de grupos e histórico de renovações.</span></p>
+      <p class="c"><b class="n">4.2</b><span><b>Dados de funcionamento:</b> identificação dos grupos em que o bot está; configurações (comandos ligados e desligados, prefixo, textos de boas-vindas e despedida, antilink, antispam); lista de participantes silenciados (identificador e número); contagem de mensagens por participante; pontuação (XP, nível, saldo virtual e ranking); e estatísticas de uso (quantas vezes cada comando foi usado e quantas mensagens houve por dia). Tudo isso sem o conteúdo das mensagens.</span></p>
+      <p class="c"><b class="n">4.3</b><span><b>Dados técnicos:</b> a sessão de conexão do WhatsApp e registros técnicos de erro (sem conteúdo de mensagens).</span></p>
+      <p class="c"><b class="n">4.4</b><span><b>O que não guardamos:</b> texto, fotos, vídeos, áudios e documentos das conversas, lista de contatos e histórico de conversas.</span></p>
+      <p class="c"><b class="n">4.5</b><span><b>Finalidade e base legal.</b> Usamos os dados apenas para prestar o serviço (operar o bot, cobrar, dar suporte, garantir a segurança e prevenir abusos). As bases legais, conforme a Lei Geral de Proteção de Dados (LGPD), são a execução de contrato, o legítimo interesse (segurança e prevenção a fraudes) e o cumprimento de obrigação legal, conforme o caso.</span></p>
+    </section>
+
+    <section id="s5">
+      <h2>5. Recursos de inteligência artificial</h2>
+      <p class="c"><b class="n">5.1</b><span>Alguns comandos (como a Wappia) usam um provedor de inteligência artificial de terceiros (Groq). Quando um participante usa esse recurso, o texto que ele enviou ao recurso é encaminhado ao provedor para gerar a resposta. Nós não armazenamos esse texto.</span></p>
+      <p class="c"><b class="n">5.2</b><span>O tratamento feito pelo provedor segue os termos dele e pode envolver transferência de dados para fora do Brasil. O cliente pode pedir ao Prestador a desativação desses comandos a qualquer momento e deve informar os membros dos grupos sobre o uso desse recurso.</span></p>
+    </section>
+
+    <section id="s6">
+      <h2>6. Compartilhamento de dados</h2>
+      <p class="c"><b class="n">6.1</b><span>Não vendemos dados. Compartilhamos apenas o necessário com: o provedor de hospedagem; o provedor de inteligência artificial, nos casos do item 5; serviços de rede e segurança (como o Cloudflare, quando utilizado); e autoridades, quando a lei exigir.</span></p>
+    </section>
+
+    <section id="s7">
+      <h2>7. Papéis, segurança, retenção e seus direitos</h2>
+      <p class="c"><b class="n">7.1</b><span><b>Papéis na LGPD.</b> Quanto aos dados de cadastro, o Prestador é o controlador. Quanto aos dados dos participantes dos grupos, é o cliente quem decide usar o bot e, portanto, o controlador; o Prestador atua como operador, tratando esses dados apenas conforme as instruções do cliente e para prestar o serviço.</span></p>
+      <p class="c"><b class="n">7.2</b><span><b>Responsabilidades do cliente.</b> Informar aos membros dos seus grupos que há um bot e quais recursos ele tem (contagem de mensagens, ranking, inteligência artificial), e usar o serviço de acordo com a lei.</span></p>
+      <p class="c"><b class="n">7.3</b><span><b>Segurança.</b> Mantemos acesso restrito ao servidor, conexão protegida por HTTPS, backups protegidos e atualizações. Se houver um incidente que possa gerar risco relevante aos dados, comunicaremos o cliente e, quando couber, a Autoridade Nacional de Proteção de Dados (ANPD), em prazo razoável.</span></p>
+      <p class="c"><b class="n">7.4</b><span><b>Retenção e exclusão.</b> Guardamos os dados enquanto o contrato estiver ativo. Com o plano vencido, o bot fica pausado e os dados ficam guardados por até <mark class="preencher">[30]</mark> dias, para facilitar a renovação. Depois disso, apagamos a sessão e os dados do cliente. A pedido do cliente, a exclusão é feita antes disso. Dados de pagamento podem ser mantidos pelo prazo exigido em lei.</span></p>
+      <p class="c"><b class="n">7.5</b><span><b>Seus direitos.</b> Você pode pedir confirmação de que tratamos seus dados, acesso, correção, anonimização, bloqueio ou eliminação, portabilidade, informações sobre compartilhamento e a revogação de consentimento. Os pedidos podem ser feitos pelo WhatsApp +55 61 99196-9783 ou pelo e-mail <mark class="preencher">ibson.hit@gmail.com</mark>, e respondemos em até <mark class="preencher">[15]</mark> dias. Participantes de grupos também podem fazer pedidos a nós ou ao cliente responsável pelo grupo.</span></p>
+    </section>
+
+    <section id="s8">
+      <h2>8. Planos, pagamento e liberação</h2>
+      <p class="c"><b class="n">8.1</b><span>Planos e valores vigentes:</span></p>
+      <div class="tw"><table>
+        <thead><tr><th>Plano</th><th>Valor</th><th>Duração</th><th>Grupos garantidos</th></tr></thead>
+        <tbody>
+          <tr><td>Mensal</td><td>R$ 19,90</td><td>30 dias</td><td>até 3</td></tr>
+          <tr><td>Trimestral</td><td>R$ 49,90</td><td>90 dias</td><td>até 8</td></tr>
+          <tr><td>Anual</td><td>R$ 179,90</td><td>365 dias</td><td>até 15</td></tr>
+          <tr><td>Vitalício</td><td>R$ 269,90</td><td>sem data de vencimento</td><td>até 50</td></tr>
+          <tr><td>Código do bot</td><td>R$ 500,00</td><td>pagamento único</td><td>sem limite (hospedagem por conta do comprador)</td></tr>
+        </tbody>
+      </table></div>
+      <p class="c"><b class="n">8.2</b><span><b>Grupos adicionais.</b> O número de grupos de cada plano é garantido. Grupos além desse número são adicionais e custam R$ 3,00 por grupo, por mês. O limite é ajustado pelo Prestador depois que o valor for combinado.</span></p>
+      <p class="c"><b class="n">8.3</b><span><b>Pagamento e liberação.</b> O pagamento é feito por Pix (chave 61991969783) e não é renovado automaticamente. O cliente envia o comprovante pelo WhatsApp e a liberação do serviço é feita manualmente, em até 24 horas depois do envio, e não em tempo real.</span></p>
+      <p class="c"><b class="n">8.4</b><span><b>Plano vitalício.</b> Vale enquanto o serviço existir. Se o Prestador encerrar o serviço, avisará o cliente com pelo menos <mark class="preencher">60</mark> dias de antecedência.</span></p>
+      <p class="c"><b class="n">8.5</b><span><b>Código do bot.</b> A venda do código é uma licença de uso do código adquirido. Quem compra hospeda e mantém o bot por conta própria. As condições complementares de licença e suporte são combinadas por escrito no momento da compra.</span></p>
+    </section>
+
+    <section id="s9">
+      <h2>9. Cancelamento e reembolso</h2>
+      <p class="c"><b class="n">9.1</b><span>O cliente pode cancelar a qualquer momento, sem multa. Como não há renovação automática, basta não renovar.</span></p>
+      <p class="c"><b class="n">9.2</b><span>Não há reembolso proporcional do período já liberado, exceto: (a) no direito de arrependimento de 7 dias, previsto no Código de Defesa do Consumidor para contratações feitas à distância, quando o cliente for consumidor; e (b) quando houver falha do serviço atribuível ao Prestador que não seja resolvida em prazo razoável.</span></p>
+    </section>
+
+    <section id="s10">
+      <h2>10. Disponibilidade, limites e riscos</h2>
+      <p class="c"><b class="n">10.1</b><span>O serviço é oferecido no estado em que se encontra. Fazemos o possível para mantê-lo no ar o tempo todo, mas não garantimos funcionamento ininterrupto, por causa de manutenções, falhas de servidor e instabilidades do próprio WhatsApp.</span></p>
+      <p class="c"><b class="n">10.2</b><span><b>Risco de bloqueio do WhatsApp.</b> O Morvyn usa uma conexão não oficial (aparelho conectado). A Meta/WhatsApp pode restringir ou banir números que usam automação. O cliente reconhece esse risco, e o Prestador não se responsabiliza por bloqueios, banimentos ou perda de conta, grupos ou contatos. Para reduzir o risco: use um número dedicado, evite mensagens em massa e não adicione pessoas sem o consentimento delas.</span></p>
+      <p class="c"><b class="n">10.3</b><span>Nos limites da lei, a responsabilidade do Prestador fica restrita ao valor pago pelo período em que o problema ocorreu.</span></p>
+    </section>
+
+    <section id="s11">
+      <h2>11. Uso proibido e suspensão</h2>
+      <p class="c"><b class="n">11.1</b><span>É proibido usar o Morvyn para spam, golpes, assédio, ameaças, conteúdo ilegal, violação de direitos de terceiros, envio de mensagens em massa não solicitadas ou qualquer prática que viole a privacidade de outras pessoas.</span></p>
+      <p class="c"><b class="n">11.2</b><span>O cliente é responsável pelo conteúdo e pelas condutas nos grupos em que usa o bot. Em caso de uso proibido, o Prestador pode suspender ou encerrar o serviço, com aviso quando possível e sem reembolso.</span></p>
+    </section>
+
+    <section id="s12">
+      <h2>12. Alterações, contato e foro</h2>
+      <p class="c"><b class="n">12.1</b><span>Estes termos podem ser atualizados. Mudanças relevantes serão comunicadas pelo WhatsApp ou por este site, e continuar usando o serviço depois do aviso significa que o cliente aceita a nova versão.</span></p>
+      <p class="c"><b class="n">12.2</b><span>Aplica-se a lei brasileira. Quando o cliente for consumidor, o foro é o do seu domicílio; nos demais casos, o foro de <mark class="preencher">Brasília-DF</mark>.</span></p>
+      <p class="c"><b class="n">12.3</b><span>Dúvidas, pedidos e reclamações: WhatsApp +55 61 99196-9783.</span></p>
+    </section>
+  </article>
+
+  <div class="fim">
+    <span class="mu">Morvyn · Termos de Uso e Política de Privacidade · Versão 1.0, 30/10/2026</span>
+    <span style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn" type="button" onclick="window.print()">Imprimir ou salvar em PDF</button>
+      <a class="btn pri" href="index.html">Voltar ao site</a>
+    </span>
+  </div>
+</main>
+
+<footer><div class="w">
+  <svg class="yoru" viewBox="0 0 200 200" role="img" aria-label="Yoru, o gato, dormindo"><use href="#yoru-zzz"/></svg>
+  <p>O Yoru dorme. O Morvyn não. · <a href="index.html"><em>Início</em></a> · <a href="comandos.html"><em>Comandos</em></a></p>
+</div></footer>
+<button class="subir" id="subir" type="button" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ellipse cx="12" cy="16.5" rx="5.2" ry="4.3"/><ellipse cx="5" cy="11" rx="2.2" ry="2.8" transform="rotate(-20 5 11)"/><ellipse cx="9.3" cy="6.6" rx="2.2" ry="3"/><ellipse cx="14.7" cy="6.6" rx="2.2" ry="3"/><ellipse cx="19" cy="11" rx="2.2" ry="2.8" transform="rotate(20 19 11)"/></svg></button>
+
+<script>
+// no desktop o índice fica aberto ao lado do texto; no celular começa fechado
+const toc = document.querySelector('details.toc')
+if (toc && !matchMedia('(min-width:1000px)').matches) toc.open = false
+
+// ===== OS OLHOS DO YORU SEGUEM O CURSOR =====
+;(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { document.querySelector('body > svg[aria-hidden]')?.pauseAnimations(); return }
+  let px = 0, py = 0, raf = 0
+  const olhar = () => {
+    raf = 0
+    document.querySelectorAll('svg.yoru').forEach(s => {
+      const r = s.getBoundingClientRect()
+      if (r.bottom < 0 || r.top > innerHeight) return
+      const dx = px - (r.left + r.width / 2), dy = py - (r.top + r.height * .45)
+      const d = Math.hypot(dx, dy) || 1, f = Math.min(1, d / 160)
+      s.style.setProperty('--yx', (dx / d * 3.4 * f).toFixed(2))
+      s.style.setProperty('--yy', (dy / d * 2.2 * f).toFixed(2))
+    })
+  }
+  addEventListener('pointermove', e => { px = e.clientX; py = e.clientY; if (!raf) raf = requestAnimationFrame(olhar) }, { passive: true })
+})()
+
+// ===== PATINHA: VOLTAR AO TOPO =====
+;(() => {
+  const p = document.getElementById('subir')
+  if (!p) return
+  const ver = () => p.classList.toggle('on', scrollY > 600)
+  addEventListener('scroll', ver, { passive: true }); ver()
+  p.onclick = () => scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
+})()
+
+// ===== MENU LATERAL =====
+;(() => {
+  const b = document.getElementById('burger'), m = document.getElementById('menu'), s = document.getElementById('scrim'), x = document.getElementById('fechar')
+  if (!b || !m) return
+  const aberto = () => document.body.classList.contains('menu-open')
+  const abrir = () => {
+    document.body.classList.add('menu-open'); document.documentElement.style.overflow = 'hidden'
+    b.setAttribute('aria-expanded', 'true'); b.setAttribute('aria-label', 'Fechar menu')
+    requestAnimationFrame(() => x.focus({ preventScroll: true }))
+  }
+  const fechar = (voltar = true) => {
+    document.body.classList.remove('menu-open'); document.documentElement.style.overflow = ''
+    b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-label', 'Abrir menu')
+    if (voltar) b.focus({ preventScroll: true })
+  }
+  b.onclick = () => aberto() ? fechar() : abrir()
+  x.onclick = () => fechar()
+  s.onclick = () => fechar()
+  m.addEventListener('click', e => { if (e.target.closest('a')) fechar(false) })
+  document.addEventListener('keydown', e => {
+    if (!aberto()) return
+    if (e.key === 'Escape') return fechar()
+    if (e.key !== 'Tab') return
+    const f = [...m.querySelectorAll('a[href],button')]
+    const i = f.indexOf(document.activeElement)
+    if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus() }
+    else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus() }
+  })
+})()
+</script>
+</body>
+</html>
